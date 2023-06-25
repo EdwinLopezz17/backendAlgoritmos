@@ -129,6 +129,12 @@ def dijkstra(matriz_costos, ciudadesObj, inicioObj, finObj):
                 min_distancia = ciudad.distancia
                 actual = ciudad
 
+        # Verificar si no se encontró un camino válido
+        if actual.distancia == sys.maxsize:
+            camino = []
+            peso = sys.maxsize
+            return camino, peso
+
     camino = finObj.camino + [finObj]
     peso = finObj.distancia
 
