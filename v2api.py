@@ -61,6 +61,13 @@ def build_matrix():
 
 
 
+@app.route('/ciudades', methods=['GET'])
+def obtener_ciudades():
+    
+    return ciudades
+
+
+
 @app.route('/dijkstra', methods=['POST'])
 def ApiDijkstra():
 
